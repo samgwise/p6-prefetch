@@ -1,8 +1,8 @@
 use v6.c;
 use Test;
 
-use-ok 'PreFetch';
-use PreFetch;
+use-ok 'Seq::PreFetch';
+use Seq::PreFetch;
 
 is Seq(1..10).&pre-fetch, 1..10,          "All vaules are returned from finite Seq";
 is Seq(1..*).&pre-fetch[0..9], 1..10,     "Slice of vaules are returned from infinite Seq";

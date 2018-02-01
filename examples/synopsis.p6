@@ -1,6 +1,6 @@
 #! /usr/bin/env perl6
 use v6;
-use PreFetch;
+use Seq::PreFetch;
 
 sub slow-and-lazy( --> Seq) {
   gather for 1..* {

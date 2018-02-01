@@ -1,15 +1,15 @@
 use v6.c;
-unit class PreFetch:ver<0.0.1>;
+unit class Seq::PreFetch:ver<0.1.0>;
 
 =begin pod
 
 =head1 NAME
 
-PreFetch - Asynchronously pre-fetch the next item of a Seq
+Seq::PreFetch - Asynchronously pre-fetch the next item of a Seq
 
 =head1 SYNOPSIS
 
-  use PreFetch;
+  use Seq::PreFetch;
 
   sub slow-and-lazy( --> Seq) {
     gather for 1..* {
@@ -29,7 +29,7 @@ PreFetch - Asynchronously pre-fetch the next item of a Seq
 
 =head1 DESCRIPTION
 
-PreFetch asynchronously pre-fetches the next item of a Seq before you pull from the Seq.
+Seq::PreFetch asynchronously pre-fetches the next item of a Seq before you pull from the Seq.
 It provides the sub pre-fetch which wraps a Seq with a pre-fetching Seq.
 
 This pattern allows you to consume one value from a Seq and begin concurrently calculating the next value of a Seq ready for the next time you need a value.
